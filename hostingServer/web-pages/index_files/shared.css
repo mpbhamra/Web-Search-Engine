@@ -1,0 +1,32 @@
+* {box-sizing: border-box;}
+
+/* header */
+header {padding:20px;}
+header .back-to-article {color:#e7e7e7; font-family: "Open Sans", Arial, Verdana; text-decoration: none; font-weight: 500; font-size: 14px;}
+header .back {color:#e7e7e7;}
+header .social-wrapper {float:right;}
+header .social-wrapper .fb-like {vertical-align: top;}
+
+
+.cba-wrapper {position: fixed; top:60px; right:20px; z-index: 9999; width:178px; font-size: 12px; text-align: center; padding: 24px 24px 10px 24px; background: rgba(255,255,255,.7); font-family: Muli;}
+.cba-close {position: absolute; top:0px; right:0px; width:24px; height: 24px; cursor: pointer; z-index: 1;}
+.cba-close::before, .cba-close::after {content: ""; position: absolute; top:8px; right: 11px; width:2px; height: 8px; background: #333; z-index: 2; border-radius: 2px;}
+.cba-close::before { transform: rotate(45deg); -webkit-transform:rotate(45deg); -moz-transform:rotate(45deg);}
+.cba-close::after {transform: rotate(-45deg);  -webkit-transform:rotate(-45deg); -moz-transform:rotate(-45deg);}
+.cba-close:hover {background: rgba(255,255,255,.5)}
+.carbon-poweredby { text-transform: uppercase; text-decoration: none; color: #cc301e; font-size: 80%;}
+.carbon-poweredby:hover { color: #333;}
+.carbon-text { color: #4f5152; padding: 10px 0 15px 0; display: block; line-height: 1.2; text-decoration: none;}
+@media screen and (max-width: 800px) {
+    body {}
+    .cba-wrapper {width: 100%; bottom: 0px; top: initial; right: initial; left:0px; background: #FFF; text-align: left;}
+    .cba-wrapper::before {content: 'Advertisement'; position: absolute; top: 0; left: 0; color: #999; font-size: 9px; padding: 8px 24px;}
+    .carbon-img {display: none;}
+    .carbon-text {padding: 0px; font-weight: 600;}
+    .cba-close:hover {background: #999;}
+    .carbon-poweredby {font-size: 74%;}
+}
+
+@media screen and (max-width: 400px) {
+    .cba-wrapper {display: none;}
+}
